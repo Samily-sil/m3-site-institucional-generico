@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url(reset.css);
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+--brand-1: #4C6EF5;
+--brand-2: #364FC7;
+
+--gray-1: #191C1F;
+--gray-2: #212529;
+--gray-3: #343A40;
+--gray-4: #ADB5BD;
+--gray-5: #CED4DA;
+--gray-6: #EDF2FF;
+--gray-7: #F8F9FA;
+
+--title1: 600 52px 140%;
+--title2: 600 40px 160%;
+--title3: 600 32px 160%;
+
+--text1: 400 20px 150%;
+--text2: 400 18px 150%;
+--text3: 400 16px 150%;
+--text4: 600 16px 150%;
+}
