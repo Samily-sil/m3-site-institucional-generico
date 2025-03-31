@@ -1,0 +1,6 @@
+.container {
+    width: 100%;
+    max-width: 1256px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Garante que o conteúdo não fique colado nas bordas */
+}
