@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    max-width: 1256px;
     margin: 0 auto; /* Centraliza o conteúdo */
 }
 
@@ -10,15 +9,29 @@ body {
 
 .header {
     background-color: var(--gray-1);
+    width: 1728;
+    height: 1000;
+    padding-top: 20px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    border-bottom-width: 2px; 
+    border-bottom: 2px var(--brand-1) solid;
 }
 
 .header__content {
     display: flex;
     justify-content: space-between;
+    gap: 25px;
 }
 
 .about {
     background-color: var(--gray-1);
+}
+
+.header__logo {
+    width: 200;
+    height: 200;
 }
 
 .header__button {
@@ -26,75 +39,162 @@ body {
     border: 1px solid;
     border-color: white;
     color: white;
-    font-size: var(--text4);
+    /* font-size: var(--text4); */
+    border-radius: 0;
+    width: 266;
+    height: 60;
+    padding-top: 20px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+    padding-left: 32px;
+    gap: 10px;
+    border-width: 1px;
+    cursor: pointer;
 }
 
 .banner__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    padding-top: 200px;
+    padding-right: 100px;
+    padding-bottom: 200px;
+    padding-left: 100px;
 }
 
 .banner__title {
     color: white;
-    font-size: var(--title1);
+    /* font-size: var(--title1); */
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 140%;
+    text-align: center;
+    vertical-align: middle;
+    /* white-space: nowrap; */
 }
 
 .banner__highlight {
     color: var(--brand-2);
-    font-size: var(--title1);
 }
 
 .banner__description {
     display: flex;
     color: var(--gray-4);
-    font-size: var(--text4);
+    /* font-size: var(--text4); */
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    vertical-align: middle; 
+    padding-left: 200px;
+    padding-right: 200px;   
 }
 
 .banner__button {
     background-color: var(--brand-1);
     color: white;
     border: none;
+    width: 142;
+    height: 60;
+    gap: 10px;
+    padding-top: 20px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+    padding-left: 32px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .about__content {
     display: flex;
     justify-content: space-between;
+
+    gap: 150px;
+    padding-top: 82px;
+    padding-right: 150px;
+    padding-bottom: 82px;
+    padding-left: 150px;
 }
 
 .about__title {
     color: white;
     font-size: var(--title2);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 160%;
+    width: 50%;
+
 }
 
 .about__description {
+    display: flex;
     color: var(--gray-5);
-    font-size: var(--text1);
+/*    font-size: var(--text1); */
+    width: 50%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    align-items: center;
 }
 
 .faq__content {
     display: flex;
     justify-content: space-between;
+
+    gap: 56px;
+    padding-top: 82px;
+    padding-right: 150px;
+    padding-bottom: 82px;
+    padding-left: 150px;
 }
 
 .faq__title {
     color: var(--gray-6);
     font-size: var(--title2);
-}
-
-.faq__button {
-    background-color: var(--brand-1);
-    color: white;
-    border: none;    
-}
-
-.faq__list {
-    list-style: none;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 160%;
 }
 
 .faq__description {
     color: var(--gray-4);
     font-size: var(--text1);
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.faq__button {
+    background-color: var(--brand-1);
+    color: white;
+    border: none;
+    width: 266;
+    height: 60;
+    gap: 10px;
+    padding-top: 20px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+    padding-left: 32px;
+
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.faq__list {
+    list-style: none;
 }
 
 .faq__question{
@@ -102,56 +202,106 @@ body {
     justify-content: center;
     color: var(--gray-6);
     font-size: var(--title3);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 160%;
+    text-align: center;
 }
 
 .faq__answer {
     color: var(--gray-4);
     font-size: var(--text1);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: justify;
 }
 
 .comments__content {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    gap: 56px;
+    padding-top: 82px;
+    padding-right: 150px;
+    padding-bottom: 82px;
+    padding-left: 150px;
+
 }
 
 .comments__header {
     background-color: var(--brand-1);
-    width: 800px;
-    height: 300px;
+    height: 400px;
+    width: 400px;
+    padding-top: 80px;
+    padding-right: 52px;
+    padding-bottom: 80px;
+    padding-left: 52px;
+    margin-left: 50px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 
 .comments__title {
     color: var(--gray-7);
     font-size: var(--title2);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%; 
+    text-align: left; 
 }
 
 .comments__description {
     color: var(--gray-7);
     font-size: var(--text1);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: justify;
 }
 
 .comments__list {
     list-style: none;
+    width: 70%;
+    height: 1223;
+    gap: 82px;
 }
 
 .comments__item {
     display: flex;
+    width: 620;
+    height: 179;
+    gap: 16px;
 }
 
 .comments__name {
     color: var(--gray-6);
     font-size: var(--title3);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 160%;
+    vertical-align: middle;
 }
 
 .comments__turma {
     color: var(--gray-4);
     font-size: var(--text3);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
 }
 
 .comments__text {
     color: var(--gray-5);
     font-size: var(--text2);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: justify;
 }
 
 .footer {
