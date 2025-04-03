@@ -35,6 +35,11 @@ body {
 }
 
 .header__button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
     background-color: var(--gray-1);
     border: 1px solid;
     border-color: white;
@@ -147,11 +152,15 @@ body {
     display: flex;
     justify-content: space-between;
 
-    gap: 56px;
+    gap: 70px;
     padding-top: 82px;
     padding-right: 150px;
     padding-bottom: 82px;
     padding-left: 150px;
+}
+
+.faq__wrapper {
+    width: 150%;
 }
 
 .faq__title {
@@ -219,89 +228,91 @@ body {
 
 .comments__content {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Mantém a ordem inversa */
+    align-items: flex-start; /* Alinha os itens na vertical */
+    justify-content: center; /* Centraliza horizontalmente */
     gap: 56px;
-    padding-top: 82px;
-    padding-right: 150px;
-    padding-bottom: 82px;
-    padding-left: 150px;
-
+    max-width: 1200px; /* Define um limite máximo */
+    margin: 0 auto; /* Centraliza no meio da tela */
+    padding: 82px 150px;
 }
 
 .comments__header {
     background-color: var(--brand-1);
-    height: 400px;
-    width: 400px;
-    padding-top: 80px;
-    padding-right: 52px;
-    padding-bottom: 80px;
-    padding-left: 52px;
-    margin-left: 50px; 
-
+    width: 500px;
+    height: auto; /* Faz a altura se ajustar ao conteúdo */
+    max-width: 500px; /* Garante que não expanda demais */
+    padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-left: 0px; /* Afastando da lista de comentários */
 }
-
 
 .comments__title {
     color: var(--gray-7);
-    font-size: var(--title2);
+    font-size: var(--title2); /* Agora ele usa a variável correta */
     font-weight: 600;
     font-size: 40px;
-    line-height: 120%; 
-    text-align: left; 
+    line-height: 120%;
+    text-align: center; /* Para alinhar corretamente */
 }
 
 .comments__description {
     color: var(--gray-7);
-    font-size: var(--text1);
+    font-size: var(--text1); /* Agora ele usa a variável correta */
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-    text-align: justify;
+    text-align: center; /* Alinha o texto corretamente */
 }
 
 .comments__list {
     list-style: none;
     width: 70%;
-    height: 1223;
-    gap: 82px;
+    gap: 50px;
 }
 
 .comments__item {
     display: flex;
-    width: 620;
-    height: 179;
+    align-items: flex-start; /* Alinha os elementos verticalmente */
+    width: 100%; /* Adicionando 'px' */
+    flex-wrap: nowrap;
     gap: 16px;
 }
 
 .comments__name {
     color: var(--gray-6);
-    font-size: var(--title3);
+    /* font-size: var(--title3); */
     font-weight: 600;
     font-size: 32px;
     line-height: 160%;
-    vertical-align: middle;
+    white-space: nowrap; /* Evita quebra de linha no nome */
 }
 
 .comments__turma {
     color: var(--gray-4);
-    font-size: var(--text3);
+  /*  font-size: var(--text3);*/
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    margin-top: -8px; /* Ajusta o posicionamento da turma */
 }
 
 .comments__text {
     color: var(--gray-5);
-    font-size: var(--text2);
+    /*font-size: var(--text2);*/
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    text-align: justify;
+    text-align: justify; /* Ajuste para manter padrão */
+    max-width: 400px; /* Para evitar que o texto fique muito espalhado */
+}
+
+.comments__author {
+    width: 180px; /* Define um tamanho fixo para a parte do nome e turma */
 }
 
 .footer {
@@ -309,5 +320,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--gray-1);
-    padding: 20px;
+
+    width: 1728;
+    height: 102;
+    top: 3684px;
+    padding-top: 50px;
+    padding-right: 775px;
+    padding-bottom: 50px;
+    padding-left: 775px;
+    gap: 10px;
 }
