@@ -1,28 +1,36 @@
 .container {
     width: 100%;
-    margin: 0 auto; /* Centraliza o conteúdo */
+    margin: 0 auto; 
 }
+
+* {
+    box-sizing: border-box;
+}
+  
 
 body {
     background-color: var(--gray-2);
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;  
     background-color: var(--gray-1);
-    width: 1728;
-    height: 1000;
-    padding-top: 20px;
-    padding-right: 200px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    border-bottom-width: 2px; 
-    border-bottom: 2px var(--brand-1) solid;
+    border-bottom: 2px solid var(--brand-1);
+    z-index: 1000;  
+    justify-content: space-between;
+    border-bottom-width: 2px;
 }
 
 .header__content {
     display: flex;
     justify-content: space-between;
-    gap: 25px;
+    align-items: center;
+    max-width: 1400px;  
+    margin: 0 auto;  
+    padding: 20px 32px; 
 }
 
 .about {
@@ -30,15 +38,17 @@ body {
 }
 
 .header__logo {
-    width: 200;
-    height: 200;
+    width: 200px;
+    height: auto;
 }
 
 .header__button {
     font-weight: 600;
     font-size: 16px;
-    line-height: 150%;
     text-align: center;
+
+    display: flex;
+    align-items: center;
 
     background-color: var(--gray-1);
     border: 1px solid;
@@ -46,8 +56,6 @@ body {
     color: white;
     /* font-size: var(--text4); */
     border-radius: 0;
-    width: 266;
-    height: 60;
     padding-top: 20px;
     padding-right: 32px;
     padding-bottom: 20px;
@@ -62,7 +70,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 
-    padding-top: 200px;
+    padding-top: 250px;
     padding-right: 100px;
     padding-bottom: 200px;
     padding-left: 100px;
@@ -76,7 +84,6 @@ body {
     line-height: 140%;
     text-align: center;
     vertical-align: middle;
-    /* white-space: nowrap; */
 }
 
 .banner__highlight {
@@ -100,8 +107,6 @@ body {
     background-color: var(--brand-1);
     color: white;
     border: none;
-    width: 142;
-    height: 60;
     gap: 10px;
     padding-top: 20px;
     padding-right: 32px;
@@ -114,6 +119,7 @@ body {
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .about__content {
@@ -151,6 +157,8 @@ body {
 .faq__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
 
     gap: 70px;
     padding-top: 82px;
@@ -160,7 +168,11 @@ body {
 }
 
 .faq__wrapper {
-    width: 150%;
+    width: 40%;
+    max-width: 700px; 
+    position: sticky;
+    top: 100px; 
+    align-self: flex-start;
 }
 
 .faq__title {
@@ -185,8 +197,8 @@ body {
     background-color: var(--brand-1);
     color: white;
     border: none;
-    width: 266;
-    height: 60;
+    width: 266px;
+    height: 60px;
     gap: 10px;
     padding-top: 20px;
     padding-right: 32px;
@@ -200,10 +212,13 @@ body {
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .faq__list {
     list-style: none;
+    width: 100%;
+    flex: 1;
 }
 
 .faq__question{
@@ -228,59 +243,61 @@ body {
 
 .comments__content {
     display: flex;
-    flex-direction: row-reverse; /* Mantém a ordem inversa */
-    align-items: flex-start; /* Alinha os itens na vertical */
-    justify-content: center; /* Centraliza horizontalmente */
+    flex-direction: row-reverse; 
+    align-items: flex-start; 
+    justify-content: center; 
     gap: 56px;
-    max-width: 1200px; /* Define um limite máximo */
-    margin: 0 auto; /* Centraliza no meio da tela */
+    margin: 0 auto; 
     padding: 82px 150px;
 }
 
 .comments__header {
+    position: sticky;
+    top: 150px; 
+    align-self: flex-start;
     background-color: var(--brand-1);
-    width: 500px;
-    height: auto; /* Faz a altura se ajustar ao conteúdo */
-    max-width: 500px; /* Garante que não expanda demais */
+    width: 600px;
+    height: 500px;
+    max-width: 600px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 0px; /* Afastando da lista de comentários */
+    margin-left: 0px;
 }
 
 .comments__title {
     color: var(--gray-7);
-    font-size: var(--title2); /* Agora ele usa a variável correta */
+    font-size: var(--title2); 
     font-weight: 600;
     font-size: 40px;
     line-height: 120%;
-    text-align: center; /* Para alinhar corretamente */
+    text-align: left; 
 }
 
 .comments__description {
     color: var(--gray-7);
-    font-size: var(--text1); /* Agora ele usa a variável correta */
+    font-size: var(--text1); 
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-    text-align: center; /* Alinha o texto corretamente */
+    text-align: left; 
 }
 
 .comments__list {
     list-style: none;
     width: 70%;
-    gap: 50px;
 }
 
 .comments__item {
     display: flex;
-    align-items: flex-start; /* Alinha os elementos verticalmente */
-    width: 100%; /* Adicionando 'px' */
+    align-items: flex-start; 
+    width: 100%;
     flex-wrap: nowrap;
     gap: 16px;
+    padding-right: 0;
 }
 
 .comments__name {
@@ -289,7 +306,7 @@ body {
     font-weight: 600;
     font-size: 32px;
     line-height: 160%;
-    white-space: nowrap; /* Evita quebra de linha no nome */
+    white-space: nowrap; 
 }
 
 .comments__turma {
@@ -298,7 +315,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    margin-top: -8px; /* Ajusta o posicionamento da turma */
+    margin-top: -8px;
 }
 
 .comments__text {
@@ -307,12 +324,12 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
-    text-align: justify; /* Ajuste para manter padrão */
-    max-width: 400px; /* Para evitar que o texto fique muito espalhado */
+    text-align: justify; 
+    max-width: 400px; 
 }
 
 .comments__author {
-    width: 180px; /* Define um tamanho fixo para a parte do nome e turma */
+    width: 180px; 
 }
 
 .footer {
@@ -321,12 +338,10 @@ body {
     align-items: center;
     background-color: var(--gray-1);
 
-    width: 1728;
-    height: 102;
+    width: 100%;
+    height: 100px;
     top: 3684px;
     padding-top: 50px;
-    padding-right: 775px;
-    padding-bottom: 50px;
-    padding-left: 775px;
+    padding: 50px 32px 50px;
     gap: 10px;
 }
