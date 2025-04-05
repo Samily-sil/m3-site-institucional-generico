@@ -9,14 +9,31 @@
     <script src="/src/scripts/index.js" defer></script>
   </head>
   <body class="container">
+
+    <!-- ====== Modal ====== -->
+    <dialog id="modalController">
+      <div class="modal__container">
+        <div class="cadastro-X">
+          <h1 class="modal__cadastro">Cadastro</h1> 
+          <button id="close--modal">X</button>
+        </div>
+        <p class="modal__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Voluptates laudantium excepturi quis dolorum cumque ut omnis quas illo deleniti? 
+          Maxime aliquam maiores quaerat temporibus quis ab nesciunt unde optio ducimus.</p>
+        <input class="modal__form" type="text" name="Email" id="Email" placeholder="Digitar email">
+        <button class="modal__button">Entrar na lista para próxima turma</button>
+      </div>
+    </dialog>
+
     <!-- ====== Header ====== -->
     <header class="header">
       <div class="header__content">
         <img class="header__logo" src="src/assets/logo.svg" alt="Logo" />
-        <button class="header__button">Entrar para próxima turma</button>
+        <button class="header__button open--modal">Entrar para próxima turma</button>
       </div>
     </header>
     <main>
+
       <!-- ====== Section Banner ====== -->
       <section class="banner">
         <div class="banner__content">
@@ -55,7 +72,7 @@
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </p>
-              <button class="faq__button">Entrar para próxima turma</button>
+              <button class="faq__button open--modal">Entrar para próxima turma</button>
             </div>
           </div>
           <!-- RIGHT SIDE -->
