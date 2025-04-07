@@ -39,7 +39,7 @@ body {
     align-items: center;
 }
 
-#close--modal {
+#close__modal {
     width: 38px;
     height: 32px;
     padding-right: 12px;
@@ -51,6 +51,7 @@ body {
     color: var(--gray-4);
     font-size: 15px;
     text-align: center;
+    cursor: pointer;
 }
 
 .modal__cadastro{
@@ -114,6 +115,7 @@ body {
     letter-spacing: 0%;
     text-align: center;
     color: var(--gray-7);
+    cursor: pointer;
 }
 
 dialog::backdrop {
@@ -130,6 +132,7 @@ dialog::backdrop {
     z-index: 1000;  
     justify-content: space-between;
     border-bottom-width: 2px;
+    padding: 4px;
 }
 
 .header__content {
@@ -139,6 +142,7 @@ dialog::backdrop {
     max-width: 1400px;  
     margin: 0 auto;  
     padding: 20px 32px; 
+    gap: 15px;
 }
 
 .about {
@@ -178,9 +182,9 @@ dialog::backdrop {
     flex-wrap: wrap;
     justify-content: center;
 
-    padding-top: 250px;
+    padding-top: 200px;
     padding-right: 100px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
     padding-left: 100px;
 }
 
@@ -188,8 +192,8 @@ dialog::backdrop {
     color: white;
     /* font-size: var(--title1); */
     font-weight: 600;
-    font-size: 52px;
-    line-height: 140%;
+    font-size: 54px;
+    line-height: 150%;
     text-align: center;
     vertical-align: middle;
 }
@@ -207,8 +211,9 @@ dialog::backdrop {
     line-height: 150%;
     text-align: center;
     vertical-align: middle; 
-    padding-left: 200px;
-    padding-right: 200px;   
+    padding-left: 150px;
+    padding-right: 150px;   
+    margin-bottom: 50px;
 }
 
 .banner__button {
@@ -236,9 +241,9 @@ dialog::backdrop {
 
     gap: 150px;
     padding-top: 82px;
-    padding-right: 150px;
+    padding-right: 100px;
     padding-bottom: 82px;
-    padding-left: 150px;
+    padding-left: 100px;
 }
 
 .about__title {
@@ -248,7 +253,6 @@ dialog::backdrop {
     font-size: 40px;
     line-height: 160%;
     width: 50%;
-
 }
 
 .about__description {
@@ -260,6 +264,7 @@ dialog::backdrop {
     font-size: 20px;
     line-height: 150%;
     align-items: center;
+    text-align: justify;
 }
 
 .faq__content {
@@ -270,9 +275,9 @@ dialog::backdrop {
 
     gap: 70px;
     padding-top: 82px;
-    padding-right: 150px;
+    padding-right: 100px;
     padding-bottom: 82px;
-    padding-left: 150px;
+    padding-left: 100px;
 }
 
 .faq__wrapper {
@@ -356,7 +361,7 @@ dialog::backdrop {
     justify-content: center; 
     gap: 56px;
     margin: 0 auto; 
-    padding: 82px 150px;
+    padding: 82px 100px;
 }
 
 .comments__header {
@@ -365,15 +370,16 @@ dialog::backdrop {
     align-self: flex-start;
     background-color: var(--brand-1);
     width: 600px;
-    height: 500px;
+    height: 450px;
     max-width: 600px;
     padding: 40px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 0px;
+    margin: 0 auto;
 }
 
 .comments__title {
@@ -395,6 +401,7 @@ dialog::backdrop {
 }
 
 .comments__list {
+    padding-left: 0;
     list-style: none;
     width: 70%;
 }
@@ -402,6 +409,7 @@ dialog::backdrop {
 .comments__item {
     display: flex;
     align-items: flex-start; 
+    justify-content: space-evenly;
     width: 100%;
     flex-wrap: nowrap;
     gap: 16px;
@@ -452,4 +460,222 @@ dialog::backdrop {
     padding-top: 50px;
     padding: 50px 32px 50px;
     gap: 10px;
+}
+
+@media (max-width: 1024px) and (min-width: 749px) {
+  .about__content,
+  .faq__content,
+  .comments__content {
+    padding: 50px 40px;
+  }
+
+  .comments__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .comments__author {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .comments__name {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+
+  .comments__turma {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .comments__text {
+    max-width: 100%;
+    padding-top: 4px;
+  }
+}
+  
+@media (max-width: 768px) and (min-width: 425px) {
+  .about__content,
+  .faq__content,
+  .comments__content {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 0;
+  }
+
+  .banner__content {
+      padding: 150px 10px 100px 10px;
+  }
+
+  .banner__description {
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+
+  .about__title {
+      text-align: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 0;
+  }
+  
+  .about__content > * {
+      width: 100%;
+  }
+
+  .about__content > *,
+  .faq__content > *,
+  .comments__content > * {
+    width: 100%;
+  }
+
+  .faq__wrapper,
+  .comments__header {
+    position: static;
+  }
+
+  .faq__title {
+    text-align: center;
+  }
+
+  .faq__button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .faq__list {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .comments__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .comments__author {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .comments__name {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .comments__turma {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .comments__text {
+    max-width: 100%;
+    padding-top: 4px;
+  }
+}
+  
+@media (max-width: 425px) {
+  .about__content,
+  .faq__content,
+  .comments__content {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 0;
+  }
+
+  .banner__content {
+    padding: 150px 10px 100px 10px;
+  }
+
+  .banner__description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about__title {
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .about__content > *,
+  .faq__content > *,
+  .comments__content > * {
+    width: 100%;
+  }
+
+  .faq__wrapper,
+  .comments__header {
+    position: static;
+  }
+
+  .faq__title {
+    text-align: center;
+  }
+
+  .faq__button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .faq__list {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .comments__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .comments__author {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .comments__name {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .comments__turma {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .comments__text {
+    max-width: 100%;
+    padding-top: 4px;
+  }
 }
